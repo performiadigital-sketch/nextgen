@@ -71,19 +71,18 @@ export const PLAYERS: Player[] = [
     ],
     injuryHistory: 'Aucune blessure majeure répertoriée - Indice physique optimal',
     socialFollowers: '45k',
-    photoUrl: 'https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=500&auto=format&fit=crop&q=80',
+    photoUrl: 'https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Achta%20Toko.jpg',
     featured: true,
     trending: '+36%',
     biography: "Née le 8 juillet 2005, Achta Toko Njoya est une milieu de terrain camerounaise formée à Eclair Football Filles de Sa'a. Repérée grâce au partenariat entre son club formateur et le CD Getafe Femenino, elle rejoint l'Espagne en 2023 et s'impose en Segunda Federación avant d'être transférée au Real Madrid CF en 2025. Internationale camerounaise, elle fait partie du groupe sacré champion d'Afrique lors de la CAN Féminine 2026 et incarne la nouvelle génération de la Guinness Super League exportée en Europe.",
     photoGallery: [
-      'https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=600&auto=format&fit=crop&q=80',
-      'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=600&auto=format&fit=crop&q=80'
+      'https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Achta%20Toko.jpg'
     ],
     videoGallery: [
       {
         title: "Highlights et récupérations - Achta Toko Njoya",
         url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        thumbnail: "https://images.unsplash.com/photo-1543351611-58f69d7c1781?w=400&auto=format&fit=crop&q=80"
+        thumbnail: "https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Achta%20Toko.jpg"
       }
     ]
   },
@@ -139,18 +138,18 @@ export const PLAYERS: Player[] = [
     ],
     injuryHistory: 'Bonne régularité athlétique - aucun antécédent ligamentaire',
     socialFollowers: '68k',
-    photoUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80',
+    photoUrl: 'https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/RaissaMbappe.jpg',
     featured: true,
     trending: '+12%',
     biography: "Née le 4 octobre 1993 à Yaoundé, Raïssa Mbappé Etoundi est une attaquante camerounaise à la carrière internationale riche : Étoile Rouge de Belgrade, Getafe (où elle inscrit 19 buts et participe à la montée en Primera RFEF) puis CF Alhama, avec qui elle obtient l'ascension en Liga F. Depuis l'été 2025, elle évolue au Real Oviedo Femenino. Rapide et clinique devant le but, elle reste une référence de l'attaque des Lionnes Indomptables.",
     photoGallery: [
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80'
+      'https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/RaissaMbappe.jpg'
     ],
     videoGallery: [
       {
         title: "Ses 19 buts avec le CD Getafe Femenino",
         url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        thumbnail: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80"
+        thumbnail: "https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/RaissaMbappe.jpg"
       }
     ]
   },
@@ -204,18 +203,18 @@ export const PLAYERS: Player[] = [
     ],
     injuryHistory: 'Excellente condition physique - 100% de titularisations en 2025/2026',
     socialFollowers: '28k',
-    photoUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=80',
+    photoUrl: 'https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/lewijo.jpg',
     featured: true,
     trending: '+33%',
     biography: "Lewijo Mogaï évolue au poste de défenseure centrale pour le FC Ebolowa sur le plan national et pour les Lionnes Indomptables du Cameroun sur la scène continentale. Titulaire en charnière centrale, elle fait partie du groupe camerounais sacré champion d'Afrique lors de la CAN Féminine 2026 organisée au Maroc, un accueil triomphal lui ayant été réservé à son retour à Yaoundé aux côtés de ses coéquipières.",
     photoGallery: [
-      'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&auto=format&fit=crop&q=80'
+      'https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/lewijo.jpg'
     ],
     videoGallery: [
       {
         title: "Interventions défensives clés - CAN Féminine 2026",
         url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        thumbnail: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&auto=format&fit=crop&q=80"
+        thumbnail: "https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/lewijo.jpg"
       }
     ]
   },
@@ -268,18 +267,18 @@ export const PLAYERS: Player[] = [
     ],
     injuryHistory: 'Aucune blessure notable',
     socialFollowers: '15k',
-    photoUrl: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=80',
+    photoUrl: 'https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Brunda%20bella.jpg',
     featured: false,
     trending: '+42%',
     biography: "Ruth Bella Brunda a débuté sa carrière au Cameroun avec l'AS Fortuna Filles avant de s'envoler pour l'Espagne. Après un passage remarqué en quatrième division avec PM Friol (7 buts, 6 passes décisives), la milieu de terrain camerounaise franchit un palier en signant avec le Rayo Vallecano Femenino en troisième division espagnole, confirmant la progression continue des jeunes talents camerounais en Europe.",
     photoGallery: [
-      'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&auto=format&fit=crop&q=80'
+      'https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Brunda%20bella.jpg'
     ],
     videoGallery: [
       {
         title: "Buts et passes décisives avec PM Friol",
         url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        thumbnail: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&auto=format&fit=crop&q=80"
+        thumbnail: "https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Brunda%20bella.jpg"
       }
     ]
   },
@@ -334,18 +333,18 @@ export const PLAYERS: Player[] = [
     ],
     injuryHistory: 'Excellente longévité athlétique, profil robuste',
     socialFollowers: '19k',
-    photoUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop&q=80',
+    photoUrl: 'https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Eliane.jpg',
     featured: false,
     trending: '-5%',
     biography: "Née le 3 juillet 1991 à Yaoundé, Éliane Manbolamo Bodolo est une défenseure centrale internationale camerounaise à la solide expérience espagnole : Extremadura UD, CD Juan Grande, CD Getafe Femenino, un passage en Inde à l'Odisha FC, puis CD Argual. En juillet 2026, elle retrouve les couleurs azulones du Getafe Femenino, club où elle avait déjà évolué aux côtés de sa compatriote Raïssa Mbappé.",
     photoGallery: [
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=80'
+      'https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Eliane.jpg'
     ],
     videoGallery: [
       {
         title: "Leadership défensif et relances - Éliane Manbolamo",
         url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80"
+        thumbnail: "https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Eliane.jpg"
       }
     ]
   },
@@ -396,18 +395,18 @@ export const PLAYERS: Player[] = [
     ],
     injuryHistory: 'Aucune blessure',
     socialFollowers: '12k',
-    photoUrl: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=500&auto=format&fit=crop&q=80',
+    photoUrl: 'https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Arianda.jpg',
     featured: false,
     trending: '+15%',
     biography: "Ariadna González Canteli est une attaquante espagnole évoluant au Gijón FF, en 3ª Federación (Groupe II). Buteuse technique formée dans les Asturies, elle poursuit sa progression dans le football féminin régional avec l'ambition de gravir les échelons du football espagnol.",
     photoGallery: [
-      'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&auto=format&fit=crop&q=80'
+      'https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Arianda.jpg'
     ],
     videoGallery: [
       {
         title: "Finitions et buts en 3ª Federación - Ariadna González",
         url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        thumbnail: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&auto=format&fit=crop&q=80"
+        thumbnail: "https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Arianda.jpg"
       }
     ]
   }
@@ -459,16 +458,17 @@ export function getAllPlayers(): Player[] {
 export function getStoredPlayers(): Player[] {
   if (typeof window === 'undefined') return PLAYERS;
   try {
-    const stored = localStorage.getItem('nextgen_custom_players_v2');
+    const stored = localStorage.getItem('nextgen_custom_players_v3');
     if (stored) {
       const parsed = JSON.parse(stored);
-      if (Array.isArray(parsed) && parsed.length > 0 && parsed.some(p => p.id === 'achta-toko-njoya')) {
+      if (Array.isArray(parsed) && parsed.length > 0 && parsed.some(p => p.photoUrl && p.photoUrl.includes('supabase.co'))) {
         return parsed;
       }
     }
-    // Purge legacy cache
+    // Clean old caches
     localStorage.removeItem('nextgen_custom_players');
-    localStorage.setItem('nextgen_custom_players_v2', JSON.stringify(PLAYERS));
+    localStorage.removeItem('nextgen_custom_players_v2');
+    localStorage.setItem('nextgen_custom_players_v3', JSON.stringify(PLAYERS));
   } catch (e) {
     console.error(e);
   }
@@ -504,8 +504,9 @@ export function getStoredClubs(): Club[] {
 
 export function savePlayersToLocalStorage(players: Player[]) {
   if (typeof window !== 'undefined') {
-    localStorage.setItem('nextgen_custom_players_v2', JSON.stringify(players));
+    localStorage.setItem('nextgen_custom_players_v3', JSON.stringify(players));
     localStorage.removeItem('nextgen_custom_players');
+    localStorage.removeItem('nextgen_custom_players_v2');
   }
 }
 
@@ -523,4 +524,3 @@ export function getAllLeagues(): League[] {
 export function getAllNews(): NewsArticle[] {
   return NEWS_ARTICLES;
 }
-
