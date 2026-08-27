@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { getAllPlayers } from '@/lib/data';
+import { getAllPlayers, getStoredPlayers } from '@/lib/data';
 import { useApp } from '@/components/Providers';
 import { RadarChart } from '@/components/RadarChart';
 import { formatCurrency } from '@/lib/currency';
@@ -18,16 +18,7 @@ export default function ComparePage() {
 
   React.useEffect(() => {
     setMounted(true);
-    const stored = localStorage.getItem('nextgen_custom_players');
-    if (stored) {
-      try {
-        setPlayersList(JSON.parse(stored));
-      } catch (e) {
-        setPlayersList(getAllPlayers());
-      }
-    } else {
-      setPlayersList(getAllPlayers());
-    }
+    setPlayersList(getStoredPlayers());
 
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();

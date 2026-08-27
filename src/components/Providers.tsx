@@ -41,14 +41,29 @@ export function Providers({ children }: { children: React.ReactNode }) {
     const savedRole = localStorage.getItem('nextgen_usr_role') as UserRole;
     if (savedRole) setRoleState(savedRole);
 
+    const validIds = ['achta-toko-njoya', 'raissa-mbappe-etoundi', 'lewijo-mogai', 'ruth-bella-brunda', 'eliane-manbolamo', 'ariadna-gonzalez'];
     const savedWl = localStorage.getItem('nextgen_wl');
     if (savedWl) {
-      try { setWatchlist(JSON.parse(savedWl)); } catch (e) {}
+      try {
+        const parsed = JSON.parse(savedWl);
+        if (Array.isArray(parsed) && parsed.some(id => validIds.includes(id))) {
+          setWatchlist(parsed.filter(id => validIds.includes(id)));
+        } else {
+          localStorage.removeItem('nextgen_wl');
+        }
+      } catch (e) {}
     }
 
     const savedCmp = localStorage.getItem('nextgen_cmp');
     if (savedCmp) {
-      try { setComparedIds(JSON.parse(savedCmp)); } catch (e) {}
+      try {
+        const parsed = JSON.parse(savedCmp);
+        if (Array.isArray(parsed) && parsed.some(id => validIds.includes(id))) {
+          setComparedIds(parsed.filter(id => validIds.includes(id)));
+        } else {
+          localStorage.removeItem('nextgen_cmp');
+        }
+      } catch (e) {}
     }
     const handleGlobalError = (event: ErrorEvent) => {
       const errMessage = event.error ? event.error.stack || event.error.message : event.message;

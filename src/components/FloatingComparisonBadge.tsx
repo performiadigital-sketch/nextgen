@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useApp } from './Providers';
-import { getAllPlayers } from '@/lib/data';
+import { getAllPlayers, getStoredPlayers } from '@/lib/data';
 import { ChevronRight } from 'lucide-react';
 
 import { Player } from '@/types/player';
@@ -19,16 +19,7 @@ export function FloatingComparisonBadge() {
 
   useEffect(() => {
     setMounted(true);
-    const stored = localStorage.getItem('nextgen_custom_players');
-    if (stored) {
-      try {
-        setPlayersList(JSON.parse(stored));
-      } catch (e) {
-        setPlayersList(getAllPlayers());
-      }
-    } else {
-      setPlayersList(getAllPlayers());
-    }
+    setPlayersList(getStoredPlayers());
 
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();

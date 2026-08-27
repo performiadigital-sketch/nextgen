@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { getAllPlayers, getAllNews } from '@/lib/data';
+import { getAllPlayers, getStoredPlayers, getAllNews } from '@/lib/data';
 import { PlayerCard } from '@/components/PlayerCard';
 import { Compass, Cpu, Split, Star, ArrowRight, TrendingUp, Newspaper, Zap } from 'lucide-react';
 import { TopVideosSection } from '@/components/TopVideosSection';
@@ -14,18 +14,7 @@ export default function HomePage() {
 
   useEffect(() => {
     setMounted(true);
-    const stored = localStorage.getItem('nextgen_custom_players');
-    if (stored) {
-      try {
-        setPlayers(JSON.parse(stored));
-      } catch (e) {
-        setPlayers(getAllPlayers());
-      }
-    } else {
-      const initial = getAllPlayers();
-      localStorage.setItem('nextgen_custom_players', JSON.stringify(initial));
-      setPlayers(initial);
-    }
+    setPlayers(getStoredPlayers());
   }, []);
 
   // SSR fallback to prevent hydration mismatch

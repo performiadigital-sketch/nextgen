@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Player } from '@/types/player';
+import { getStoredPlayers } from '@/lib/data';
 
 interface PlayerHeaderInfoProps {
   player: Player;
@@ -11,16 +12,10 @@ export default function PlayerHeaderInfo({ player }: PlayerHeaderInfoProps) {
   const [activePlayer, setActivePlayer] = useState<Player>(player);
 
   useEffect(() => {
-    // Read the updated player from custom players list in localStorage
-    const customListStr = localStorage.getItem('nextgen_custom_players');
-    if (customListStr) {
-      try {
-        const list = JSON.parse(customListStr);
-        const found = list.find((p: any) => p.id === player.id);
-        if (found) {
-          setActivePlayer(found);
-        }
-      } catch (e) {}
+    const list = getStoredPlayers();
+    const found = list.find((p) => p.id === player.id);
+    if (found) {
+      setActivePlayer(found);
     }
   }, [player.id]);
 

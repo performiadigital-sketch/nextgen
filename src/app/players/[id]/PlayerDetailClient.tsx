@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Player } from '@/types/player';
+import { getStoredPlayers } from '@/lib/data';
 import { useApp } from '@/components/Providers';
 import { formatCurrency } from '@/lib/currency';
 import { Trophy, FileText, Activity } from 'lucide-react';
@@ -33,17 +34,11 @@ export default function PlayerDetailClient({ player }: PlayerDetailClientProps) 
     setMounted(true);
 
     // 1. Fetch updated player from central players database list in localStorage if it exists
-    const customListStr = localStorage.getItem('nextgen_custom_players');
-    let resolvedPlayer = player;
-    if (customListStr) {
-      try {
-        const list = JSON.parse(customListStr);
-        const found = list.find((p: any) => p.id === player.id);
-        if (found) {
-          resolvedPlayer = found;
-          setActivePlayer(found);
-        }
-      } catch (e) {}
+    const list = getStoredPlayers();
+    const found = list.find((p) => p.id === player.id);
+    let resolvedPlayer = found || player;
+    if (found) {
+      setActivePlayer(found);
     }
 
     // 2. Fetch individual custom player dashboard override keys if they exist

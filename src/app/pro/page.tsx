@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { getAllPlayers, getAllClubs, savePlayersToLocalStorage, saveClubsToLocalStorage } from '@/lib/data';
+import { getAllPlayers, getStoredPlayers, getAllClubs, getStoredClubs, savePlayersToLocalStorage, saveClubsToLocalStorage, getAllLeagues } from '@/lib/data';
 import { useApp } from '@/components/Providers';
 import { formatCurrency } from '@/lib/currency';
 import {
@@ -17,6 +17,16 @@ import {
   Check,
   Copy,
   TrendingUp,
+  Award,
+  Users,
+  Search,
+  ExternalLink,
+  ChevronRight,
+  Download,
+  AlertCircle,
+  Clock,
+  Sparkles,
+  CheckCircle2,
   Star,
   Plus,
   Save,
@@ -31,27 +41,8 @@ export default function ProHubsPage() {
 
   useEffect(() => {
     setMounted(true);
-    const stored = localStorage.getItem('nextgen_custom_players');
-    if (stored) {
-      try {
-        setPlayersList(JSON.parse(stored));
-      } catch (e) {
-        setPlayersList(getAllPlayers());
-      }
-    } else {
-      setPlayersList(getAllPlayers());
-    }
-
-    const storedClubs = localStorage.getItem('nextgen_custom_clubs');
-    if (storedClubs) {
-      try {
-        setClubsList(JSON.parse(storedClubs));
-      } catch (e) {
-        setClubsList(getAllClubs());
-      }
-    } else {
-      setClubsList(getAllClubs());
-    }
+    setPlayersList(getStoredPlayers());
+    setClubsList(getStoredClubs());
   }, []);
 
   const allPlayers = mounted ? playersList : getAllPlayers();

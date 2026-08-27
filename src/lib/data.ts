@@ -456,24 +456,63 @@ export function getAllPlayers(): Player[] {
   return PLAYERS;
 }
 
+export function getStoredPlayers(): Player[] {
+  if (typeof window === 'undefined') return PLAYERS;
+  try {
+    const stored = localStorage.getItem('nextgen_custom_players_v2');
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (Array.isArray(parsed) && parsed.length > 0 && parsed.some(p => p.id === 'achta-toko-njoya')) {
+        return parsed;
+      }
+    }
+    // Purge legacy cache
+    localStorage.removeItem('nextgen_custom_players');
+    localStorage.setItem('nextgen_custom_players_v2', JSON.stringify(PLAYERS));
+  } catch (e) {
+    console.error(e);
+  }
+  return PLAYERS;
+}
+
 export function getPlayerById(id: string): Player | undefined {
-  const players = getAllPlayers();
-  return players.find((p) => p.id === id);
+  const players = typeof window !== 'undefined' ? getStoredPlayers() : getAllPlayers();
+  return players.find((p) => p.id === id) || PLAYERS.find((p) => p.id === id);
 }
 
 export function getAllClubs(): Club[] {
   return CLUBS;
 }
 
+export function getStoredClubs(): Club[] {
+  if (typeof window === 'undefined') return CLUBS;
+  try {
+    const stored = localStorage.getItem('nextgen_custom_clubs_v2');
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (Array.isArray(parsed) && parsed.length > 0 && parsed.some(c => c.id === 'real-madrid-b')) {
+        return parsed;
+      }
+    }
+    localStorage.removeItem('nextgen_custom_clubs');
+    localStorage.setItem('nextgen_custom_clubs_v2', JSON.stringify(CLUBS));
+  } catch (e) {
+    console.error(e);
+  }
+  return CLUBS;
+}
+
 export function savePlayersToLocalStorage(players: Player[]) {
   if (typeof window !== 'undefined') {
-    localStorage.setItem('nextgen_custom_players', JSON.stringify(players));
+    localStorage.setItem('nextgen_custom_players_v2', JSON.stringify(players));
+    localStorage.removeItem('nextgen_custom_players');
   }
 }
 
 export function saveClubsToLocalStorage(clubs: Club[]) {
   if (typeof window !== 'undefined') {
-    localStorage.setItem('nextgen_custom_clubs', JSON.stringify(clubs));
+    localStorage.setItem('nextgen_custom_clubs_v2', JSON.stringify(clubs));
+    localStorage.removeItem('nextgen_custom_clubs');
   }
 }
 
@@ -484,3 +523,4 @@ export function getAllLeagues(): League[] {
 export function getAllNews(): NewsArticle[] {
   return NEWS_ARTICLES;
 }
+

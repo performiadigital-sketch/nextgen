@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
-import { getAllPlayers } from '@/lib/data';
+import { getAllPlayers, getStoredPlayers } from '@/lib/data';
 import { PlayerCard } from '@/components/PlayerCard';
 import { useApp } from '@/components/Providers';
 import { formatCurrency } from '@/lib/currency';
@@ -15,16 +15,7 @@ export default function PlayersDirectoryPage() {
 
   useEffect(() => {
     setMounted(true);
-    const stored = localStorage.getItem('nextgen_custom_players');
-    if (stored) {
-      try {
-        setPlayersList(JSON.parse(stored));
-      } catch (e) {
-        setPlayersList(getAllPlayers());
-      }
-    } else {
-      setPlayersList(getAllPlayers());
-    }
+    setPlayersList(getStoredPlayers());
   }, []);
 
   const allPlayers = mounted ? playersList : getAllPlayers();
