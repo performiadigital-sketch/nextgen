@@ -28,8 +28,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
   const [currency, setCurrencyState] = useState<CurrencyCode>('EUR');
   const [lang, setLangState] = useState<Language>('fr');
   const [role, setRoleState] = useState<UserRole>('public');
-  const [watchlist, setWatchlist] = useState<string[]>(['barbra-banda', 'tabitha-chawinga', 'melchie-dumornay']);
-  const [comparedIds, setComparedIds] = useState<string[]>(['barbra-banda', 'tabitha-chawinga']);
+  const [watchlist, setWatchlist] = useState<string[]>(['achta-toko-njoya', 'raissa-mbappe-etoundi', 'lewijo-mogai']);
+  const [comparedIds, setComparedIds] = useState<string[]>(['achta-toko-njoya', 'raissa-mbappe-etoundi']);
 
   useEffect(() => {
     const savedCur = localStorage.getItem('nextgen_cur') as CurrencyCode;

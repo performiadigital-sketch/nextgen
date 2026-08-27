@@ -34,8 +34,8 @@ export default function PlayerProfileEditor() {
   const { role, currency } = useApp();
   const allPlayers = getAllPlayers();
   
-  // Default to Barbra Banda if available
-  const defaultPlayerId = allPlayers.find(p => p.id.includes('banda'))?.id || allPlayers[0]?.id || '';
+  // Default to Achta Toko Njoya if available
+  const defaultPlayerId = allPlayers.find(p => p.id.includes('toko') || p.id.includes('achta'))?.id || allPlayers[0]?.id || '';
   const [selectedPlayerId, setSelectedPlayerId] = useState(defaultPlayerId);
   
   const fallbackPlayer: Player = {

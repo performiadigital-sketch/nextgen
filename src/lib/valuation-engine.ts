@@ -193,15 +193,12 @@ export function calculateScoutOpportunity(performanceScore: number, marketValueE
 
 export function getPlayerValuationExplanation(playerId: string): string {
   const explanations: Record<string, string> = {
-    'barbra-banda': "Valeur marchande très élevée (950k €) liée à son transfert record de 740k $ en NWSL, l'inflation financière américaine et son statut d'icône exclusive en Zambie (CAF).",
-    'lauren-james': "Sous-évaluée sportivement (850k €) car son dernier transfert Chelsea remonte à 2021 (200k £). Contrat stable et concurrence de stars à Chelsea bridant temporairement son prix.",
-    'aitana-bonmati': "Valorisation maximale (1.1M €) s'expliquant par ses Ballons d'Or 2023-2024 consécutifs, sa domination mondiale absolue avec le FC Barcelone et son levier contractuel.",
-    'tabitha-chawinga': "Prix très fort (930k €) justifié par ses titres de meilleure buteuse D1 Arkema, son rôle majeur à Lyon et son exposition internationale continue.",
-    'linda-caicedo': "Valorisation élevée (890k €) propulsée par son potentiel U21 (Real Madrid), sa valeur marketing digitale élevée et son rayonnement en Copa América.",
-    'melchie-dumornay': "Cote en forte hausse (790k €) portée par ses performances décisives en Ligue des Champions, son jeune âge et son contrat long terme avec Lyon.",
-    'ajara-nchout': "Cote modérée (320k €) expliquée par son âge (33 ans), compensée par son statut de légende emblématique des Lionnes du Cameroun et sa présence en Arabie Saoudite.",
-    'sophia-smith': "Cote maximale (920k €) s'expliquant par sa médaille d'or aux JO 2024, son titre de MVP de NWSL et son contrat long terme sécurisé jusqu'en 2028.",
-    'monique-ngock': "Valeur de 220k € cohérente pour une jeune sentinelle U21 prometteuse du Stade de Reims, représentant une opportunité de plus-value future très élevée."
+    'achta-toko-njoya': "Valeur marchande en forte croissance (150k €) portée par son jeune âge (21 ans), son titre de championne d'Afrique CAN 2026 et sa signature au Real Madrid B.",
+    'raissa-mbappe-etoundi': "Cote solide (80k €) basée sur son statut de cadre des Lionnes Indomptables (25 sélections, 10 buts), son efficacité clinique et son rôle majeur au Real Oviedo.",
+    'lewijo-mogai': "Valorisation de 60k € portée par sa solidité en charnière centrale, son sacre continental à la CAN 2026 et sa régularité de performance au FC Ebolowa.",
+    'eliane-manbolamo': "Valeur d'expérience (35k €) reflétant un leadership défensif éprouvé sur les terrains espagnols (Getafe, Extremadura) et son rôle de tutrice athlétique.",
+    'ruth-bella-brunda': "Potentiel prometteur (20k €) avec une marge de progression importante en Segunda Federación (Rayo Vallecano) suite à sa remarquable saison au PM Friol.",
+    'ariadna-gonzalez': "Profil offensif régional prometteur (15k €) doté d'une bonne technique de finition au Gijón FF en 3ª Federación."
   };
 
   return explanations[playerId] || "Valorisation équilibrée calculée selon la grille des 7 facteurs NextGen (Performance, Âge, Contrat, Ligue, Sélections, Risque).";
