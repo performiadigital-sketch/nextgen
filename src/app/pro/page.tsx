@@ -185,7 +185,10 @@ export default function ProHubsPage() {
         ? [{ season: '2025/2026', competition: club ? (club.country === 'France' ? 'Arkema Première Ligue' : 'D1 Nationale') : 'Championnat', matches: 20, goals: 5, assists: 4, minutes: 1600, rating: 7.2 }]
         : (allPlayers.find(p => p.id === adminSelectedPlayerId)?.seasonStats || []),
       transfers: adminSelectedPlayerId === 'new' ? [] : (allPlayers.find(p => p.id === adminSelectedPlayerId)?.transfers || []),
-      palmares: adminSelectedPlayerId === 'new' ? [] : (allPlayers.find(p => p.id === adminSelectedPlayerId)?.palmares || [])
+      palmares: adminSelectedPlayerId === 'new' ? [] : (allPlayers.find(p => p.id === adminSelectedPlayerId)?.palmares || []),
+      radarStats: (allPlayers.find(p => p.id === adminSelectedPlayerId)?.radarStats) || { finishing: 70, playmaking: 70, pace: 70, physique: 70, defense: 70, international: 70 },
+      injuryHistory: (allPlayers.find(p => p.id === adminSelectedPlayerId)?.injuryHistory) || 'Aucune blessure majeure',
+      socialFollowers: (allPlayers.find(p => p.id === adminSelectedPlayerId)?.socialFollowers) || '10K'
     };
 
     let updatedList: Player[];

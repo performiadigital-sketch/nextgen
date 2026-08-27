@@ -45,6 +45,7 @@ export default function PlayerProfileEditor() {
     nationality: 'Inconnue',
     countryCode: 'FR',
     confed: 'UEFA',
+    dob: '2004-01-01',
     age: 20,
     position: 'MF',
     positionDetail: 'Milieu de terrain',
@@ -67,6 +68,8 @@ export default function PlayerProfileEditor() {
     seasonStats: [],
     transfers: [],
     palmares: [],
+    injuryHistory: 'Aucune blessure majeure',
+    socialFollowers: '0',
     radarStats: { finishing: 50, playmaking: 50, pace: 50, physique: 50, defense: 50, international: 50 }
   };
 
