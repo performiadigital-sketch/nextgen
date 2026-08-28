@@ -20,7 +20,7 @@ export function Footer() {
               NextGen Women's Football est la plateforme de référence internationale dédiée à la présentation, au suivi statistique et à l'estimation de la valeur marchande des joueuses de football féminin.
             </p>
             <div className="flex items-center gap-2 text-[11px] text-purple-300">
-              <span>En collaboration avec <strong>Alma 2019</strong> & <strong>Performia Digital</strong> (Yaoundé, Cameroun)</span>
+              <span>En collaboration avec le réseau d'agences partenaires & experts data (Yaoundé, Cameroun)</span>
             </div>
           </div>
 
@@ -53,7 +53,7 @@ export function Footer() {
         <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <p>© 2026 NextGen Women's Football. Tous droits réservés.</p>
           <div className="flex items-center gap-4">
-            <span>Performia Digital — Yaoundé, Cameroun</span>
+            <span>NextGen Analytics — Yaoundé, Cameroun</span>
             <span>•</span>
             <span>Version 1.0 — Architecture Next.js</span>
           </div>

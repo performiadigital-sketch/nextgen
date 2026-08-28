@@ -174,8 +174,8 @@ export default function HomePage() {
               <h4 className="text-base font-bold text-white">Indice Officiel NextGen</h4>
               <p className="text-xs text-slate-400">Outil de négociation certifié pour les agences, clubs recruteurs et médias sportifs.</p>
               <div className="p-3 bg-purple-950/40 border border-purple-700/40 rounded-2xl text-left text-xs space-y-1.5 text-purple-200">
-                <div className="flex justify-between"><span>Partenaire Représentation :</span> <strong className="text-white">Alma 2019</strong></div>
-                <div className="flex justify-between"><span>Conception & Stratégie :</span> <strong className="text-white">Performia Digital</strong></div>
+                <div className="flex justify-between"><span>Partenaire Représentation :</span> <strong className="text-white">Agences Partenaires Agréées</strong></div>
+                <div className="flex justify-between"><span>Conception & Stratégie :</span> <strong className="text-white">NextGen Data Lab</strong></div>
                 <div className="flex justify-between"><span>Siège :</span> <strong className="text-white">Yaoundé, Cameroun</strong></div>
               </div>
             </div>

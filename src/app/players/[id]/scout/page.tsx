@@ -38,7 +38,7 @@ export default function ScoutReportPage({ params }: ScoutReportPageProps) {
 
   // Form State
   const [scoutData, setScoutData] = useState<CustomScoutReportData>({
-    scoutName: 'Scout Alma 2019',
+    scoutName: 'Scout Principal NextGen',
     date: new Date().toISOString().substring(0, 10),
     scoutNote: '',
     strengths: '',
@@ -71,7 +71,7 @@ export default function ScoutReportPage({ params }: ScoutReportPageProps) {
       } else {
         // Fallback defaults from player metrics
         setScoutData({
-          scoutName: role === 'agent' ? 'Représentant Alma 2019' : 'Scout Principal NextGen',
+          scoutName: role === 'agent' ? 'Agent Agréé' : 'Scout Principal NextGen',
           date: new Date().toISOString().substring(0, 10),
           scoutNote: player.biography || `Profil de très haut niveau international. Dominance athlétique, excellente rentabilité offensive et fort potentiel d'image. Cible de recrutement recommandée.`,
           strengths: player.position === 'FW' 

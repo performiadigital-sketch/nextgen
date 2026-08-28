@@ -420,7 +420,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     category: 'ANALYSE DATA',
     tagKey: 'news_tag_analysis',
     readTime: '4 min',
-    author: 'Équipe Performia Digital & Alma 2019',
+    author: 'NextGen Data Desk',
     image: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&auto=format&fit=crop&q=80',
     summary: "Avec son sacre à la CAN 2026 et son arrivée au Real Madrid B, Achta Toko Njoya symbolise l'ascension fulgurante des talents camerounais valorisés par NextGen.",
     content: "L'essor du football féminin africain s'accélère grâce à la passerelle développée entre le Cameroun et l'Espagne. Formée à Eclair de Sa'a et passée par Getafe, Achta Toko Njoya incarne cette réussite au Real Madrid B. Avec Raïssa Mbappé (Oviedo), Lewijo Mogaï (FC Ebolowa) et Ruth Bella Brunda (Rayo Vallecano), l'agence Alma 2019 structure un vivier d'excellence reconnu à l'international."
