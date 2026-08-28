@@ -529,7 +529,7 @@ export default function ScoutReportPage({ params }: ScoutReportPageProps) {
               {/* Signature validation watermark */}
               <div className="hidden print:flex justify-between items-center border-t border-slate-300 pt-4 text-[9px] text-slate-500 font-medium">
                 <span>
-                  {lang === 'fr' ? 'NextGen Scouting Operations • Yaoundé, Cameroun' : 'NextGen Scouting Operations • Yaounde, Cameroon'}
+                  {lang === 'fr' ? 'NextGen Scouting Operations • Intelligence & Valuation' : 'NextGen Scouting Operations • Intelligence & Valuation'}
                 </span>
                 <div className="flex items-center gap-1">
                   <CheckCircle2 className="w-3.5 h-3.5 text-green-600" />

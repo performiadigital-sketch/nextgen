@@ -444,7 +444,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     category: 'INTERVIEW',
     tagKey: 'news_tag_interview',
     readTime: '5 min',
-    author: 'Rédaction NextGen Yaoundé',
+    author: 'Rédaction NextGen International',
     image: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&auto=format&fit=crop&q=80',
     summary: "L'agence Alma 2019 partage sa vision sur l'importance d'un indice de valeur marchande transparent et certifié pour négocier des contrats justes.",
     content: "Dans cet entretien exclusif, les dirigeants d'Alma 2019 reviennent sur l'intégration de la technologie NextGen Women's Football pour accompagner le plan de carrière des joueuses camerounaises et espagnoles sous mandat officiel."

@@ -1,7 +1,7 @@
 # NextGen Women's Football — Plateforme Officielle
 
 > **Indice mondial d'évaluation, de suivi statistique et de valorisation des joueuses de football féminin.**  
-> Projet développé conformément au cahier des charges fonctionnel et technique (Version 1.0) en partenariat avec le réseau d'agences et d'experts data certifiés (Yaoundé, Cameroun).
+> Projet développé conformément au cahier des charges fonctionnel et technique (Version 1.0) en partenariat avec le réseau international d'agences et d'experts data certifiés.
 
 ---
 
@@ -96,4 +96,4 @@ nextgen/
 
 ---
 
-*Document préparé et réalisé pour NextGen Women's Football (Yaoundé, Cameroun).*
+*Document préparé et réalisé pour NextGen Women's Football.*

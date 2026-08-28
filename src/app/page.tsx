@@ -176,7 +176,7 @@ export default function HomePage() {
               <div className="p-3 bg-purple-950/40 border border-purple-700/40 rounded-2xl text-left text-xs space-y-1.5 text-purple-200">
                 <div className="flex justify-between"><span>Partenaire Représentation :</span> <strong className="text-white">Agences Partenaires Agréées</strong></div>
                 <div className="flex justify-between"><span>Conception & Stratégie :</span> <strong className="text-white">NextGen Data Lab</strong></div>
-                <div className="flex justify-between"><span>Siège :</span> <strong className="text-white">Yaoundé, Cameroun</strong></div>
+                <div className="flex justify-between"><span>Couverture :</span> <strong className="text-white">Internationale (6 Confédérations)</strong></div>
               </div>
             </div>
           </div>
