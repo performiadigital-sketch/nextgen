@@ -37,11 +37,12 @@ interface PlayerMediaGalleryProps {
 function getInitialPosts(player: Player): Post[] {
   const initial: Post[] = [];
 
+  const stadiumThumb = player.videoGallery?.[0]?.thumbnail || 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&auto=format&fit=crop&q=80';
   const defaultVideos = player.videoGallery || [
     {
       title: `Actions marquantes et temps forts de la saison — ${player.shortName}`,
       url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      thumbnail: player.photoUrl
+      thumbnail: stadiumThumb
     }
   ];
 
@@ -51,7 +52,7 @@ function getInitialPosts(player: Player): Post[] {
       type: 'video',
       title: vid.title,
       url: vid.url,
-      thumbnail: vid.thumbnail || player.photoUrl,
+      thumbnail: vid.thumbnail || stadiumThumb,
       ratings: [
         { user: 'init-user-1', score: 5 },
         { user: 'init-user-2', score: 4 },
@@ -186,6 +187,7 @@ export default function PlayerMediaGallery({ player }: PlayerMediaGalleryProps) 
 
     if (newType === 'video') {
       finalUrl = getEmbedUrl(finalUrl);
+      thumbnail = player.videoGallery?.[0]?.thumbnail || 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&auto=format&fit=crop&q=80';
     } else {
       thumbnail = finalUrl;
     }

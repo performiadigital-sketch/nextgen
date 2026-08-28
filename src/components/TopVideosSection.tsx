@@ -37,9 +37,21 @@ export function TopVideosSection() {
     const allPlayers = getAllPlayers();
     const combinedVideos: VideoPostWithPlayer[] = [];
 
-    allPlayers.forEach((player) => {
+    const stadiumFallbacks = [
+      'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=800&auto=format&fit=crop&q=80',
+    ];
+
+    allPlayers.forEach((player, pIdx) => {
       const saved = localStorage.getItem(`nextgen_player_posts_${player.id}`);
       let posts = [];
+
+      const playerDefaultVid = player.videoGallery?.[0];
+      const playerStadiumThumb = playerDefaultVid?.thumbnail || stadiumFallbacks[pIdx % stadiumFallbacks.length];
 
       if (saved) {
         try {
@@ -51,7 +63,7 @@ export function TopVideosSection() {
           {
             title: `Actions marquantes et temps forts de la saison — ${player.shortName}`,
             url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-            thumbnail: player.photoUrl
+            thumbnail: playerStadiumThumb
           }
         ];
         posts = defaultVideos.map((vid, idx) => ({
@@ -59,7 +71,7 @@ export function TopVideosSection() {
           type: 'video',
           title: vid.title,
           url: vid.url,
-          thumbnail: vid.thumbnail || player.photoUrl,
+          thumbnail: vid.thumbnail || playerStadiumThumb,
           ratings: [
             { user: 'init-user-1', score: 5 },
             { user: 'init-user-2', score: 4 },
@@ -71,7 +83,7 @@ export function TopVideosSection() {
 
       // Filter and append video posts
       const videoPosts = posts.filter((p: any) => p.type === 'video');
-      videoPosts.forEach((post: any) => {
+      videoPosts.forEach((post: any, vIdx: number) => {
         // Handle migration from old stars: number schema if needed
         let ratings = post.ratings || [];
         if (!post.ratings && typeof post.stars === 'number') {
@@ -85,12 +97,18 @@ export function TopVideosSection() {
         const average = ratings.length > 0 ? (totalScore / ratings.length).toFixed(1) : '0.0';
         const votesCount = ratings.length;
 
+        // Ensure thumbnail is a stadium/pitch image rather than portrait
+        let videoThumbnail = post.thumbnail;
+        if (!videoThumbnail || videoThumbnail === player.photoUrl || videoThumbnail.includes('supabase.co/storage/v1/object/public/nextmedia/')) {
+          videoThumbnail = playerStadiumThumb || stadiumFallbacks[(pIdx + vIdx) % stadiumFallbacks.length];
+        }
+
         combinedVideos.push({
           id: post.id,
           type: 'video',
           title: post.title,
           url: post.url,
-          thumbnail: post.thumbnail || player.photoUrl,
+          thumbnail: videoThumbnail,
           totalScore,
           average,
           votesCount,

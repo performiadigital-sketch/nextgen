@@ -268,10 +268,12 @@ export default function PlayerProfileEditor() {
       embedUrl = `https://www.youtube.com/embed/${id}`;
     }
 
+    const stadiumThumb = player.videoGallery?.[0]?.thumbnail || 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&auto=format&fit=crop&q=80';
+
     const newVideo: VideoRecord = {
       title: newVideoTitle.trim(),
       url: embedUrl,
-      thumbnail: player.photoUrl
+      thumbnail: stadiumThumb
     };
 
     const updated = [...videos, newVideo];
@@ -291,7 +293,7 @@ export default function PlayerProfileEditor() {
       type: 'video',
       title: newVideoTitle.trim(),
       url: embedUrl,
-      thumbnail: player.photoUrl,
+      thumbnail: stadiumThumb,
       stars: 0,
       starredBy: [],
       comments: [],

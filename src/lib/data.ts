@@ -82,7 +82,7 @@ export const PLAYERS: Player[] = [
       {
         title: "Highlights et récupérations - Achta Toko Njoya",
         url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        thumbnail: "https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Achta%20Toko.jpg"
+        thumbnail: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=800&auto=format&fit=crop&q=80"
       }
     ]
   },
@@ -149,7 +149,7 @@ export const PLAYERS: Player[] = [
       {
         title: "Ses 19 buts avec le CD Getafe Femenino",
         url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        thumbnail: "https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/RaissaMbappe.jpg"
+        thumbnail: "https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&auto=format&fit=crop&q=80"
       }
     ]
   },
@@ -214,7 +214,7 @@ export const PLAYERS: Player[] = [
       {
         title: "Interventions défensives clés - CAN Féminine 2026",
         url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        thumbnail: "https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/lewijo.jpg"
+        thumbnail: "https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?w=800&auto=format&fit=crop&q=80"
       }
     ]
   },
@@ -278,7 +278,7 @@ export const PLAYERS: Player[] = [
       {
         title: "Buts et passes décisives avec PM Friol",
         url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        thumbnail: "https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Brunda%20bella.jpg"
+        thumbnail: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&auto=format&fit=crop&q=80"
       }
     ]
   },
@@ -344,7 +344,7 @@ export const PLAYERS: Player[] = [
       {
         title: "Leadership défensif et relances - Éliane Manbolamo",
         url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        thumbnail: "https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Eliane.jpg"
+        thumbnail: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&auto=format&fit=crop&q=80"
       }
     ]
   },
@@ -406,7 +406,7 @@ export const PLAYERS: Player[] = [
       {
         title: "Finitions et buts en 3ª Federación - Ariadna González",
         url: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        thumbnail: "https://ontntkqfyotzfqvhzxhl.supabase.co/storage/v1/object/public/nextmedia/Arianda.jpg"
+        thumbnail: "https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=800&auto=format&fit=crop&q=80"
       }
     ]
   }
