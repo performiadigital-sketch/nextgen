@@ -414,14 +414,17 @@ export default function ScoutReportPage({ params }: ScoutReportPageProps) {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                 
                 {/* Profile card left column */}
-                <div className="md:col-span-1 flex flex-col items-center text-center p-4 bg-slate-800/80 rounded-2xl border border-slate-700 print-bg-slate print-border">
-                  <img
-                    src={player.photoUrl}
-                    alt={player.name}
-                    className="w-24 h-24 rounded-full object-cover border-2 border-purple-500 shadow-md mb-3"
-                  />
-                  <h3 className="font-extrabold text-base text-white leading-snug print-text-dark">{player.name}</h3>
-                  <span className="inline-block mt-1 px-2.5 py-0.5 bg-slate-700 text-purple-300 text-[10px] font-bold rounded-full print-bg-slate print-text-slate border print-border">
+                <div className="md:col-span-1 flex flex-col items-center text-center p-5 bg-slate-800/80 rounded-2xl border border-slate-700 print-bg-slate print-border">
+                  <div className="relative mb-3.5 group">
+                    <img
+                      src={player.photoUrl}
+                      alt={player.name}
+                      className="w-32 h-32 sm:w-36 sm:h-36 aspect-square rounded-2xl object-cover object-top border-2 border-purple-500/60 shadow-xl print-border"
+                    />
+                    <div className="absolute inset-0 rounded-2xl ring-1 ring-white/10 pointer-events-none"></div>
+                  </div>
+                  <h3 className="font-extrabold text-base sm:text-lg text-white leading-snug print-text-dark">{player.name}</h3>
+                  <span className="inline-block mt-1 px-3 py-1 bg-slate-700 text-purple-300 text-[10px] font-bold rounded-lg print-bg-slate print-text-slate border print-border">
                     {player.positionDetail || player.position}
                   </span>
                   <p className="text-[11px] text-slate-400 mt-2 print-text-slate">{player.clubName} • {player.nationality}</p>

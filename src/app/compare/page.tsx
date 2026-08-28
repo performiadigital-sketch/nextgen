@@ -82,16 +82,16 @@ export default function ComparePage() {
             return (
               <div
                 key={player.id}
-                className="relative bg-slate-900/90 border-2 border-purple-500/60 rounded-2xl p-4 flex items-center justify-between hover:shadow-lg hover:shadow-purple-950/20 transition-all duration-300"
+                className="relative bg-slate-900/90 border-2 border-purple-500/60 rounded-2xl p-4 flex items-center justify-between hover:shadow-lg hover:shadow-purple-950/20 transition-all duration-300 gap-3"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3.5 min-w-0">
                   <img
                     src={player.photoUrl}
                     alt={player.name}
-                    className="w-12 h-12 rounded-xl object-cover border border-purple-500/30"
+                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover object-top border-2 border-purple-500/50 shadow-md shrink-0"
                   />
-                  <div>
-                    <h3 className="font-extrabold text-white text-sm line-clamp-1">{player.name}</h3>
+                  <div className="min-w-0">
+                    <h3 className="font-extrabold text-white text-sm sm:text-base line-clamp-1">{player.name}</h3>
                     <p className="text-[11px] text-slate-400 mt-0.5 truncate">
                       {player.clubName}
                     </p>
@@ -101,7 +101,7 @@ export default function ComparePage() {
                   </div>
                 </div>
 
-                <div className="flex flex-col items-end justify-between h-full space-y-4">
+                <div className="flex flex-col items-end justify-between h-full space-y-3 shrink-0">
                   <button
                     onClick={() => removeComparison(player.id)}
                     className="p-1 text-slate-500 hover:text-white rounded-lg hover:bg-white/5 transition"
@@ -181,22 +181,38 @@ export default function ComparePage() {
           {/* Radar Section matching Screenshot 2 */}
           <div className="glass-card p-6 md:p-8 space-y-6">
             <div className="text-center">
-              <span className="text-[10px] uppercase font-bold text-purple-400 tracking-widest block">
+              <span className="text-xs uppercase font-black text-purple-400 tracking-widest block">
                 {lang === 'fr' ? 'COMPARAISON VISUELLE MULTI-AXES (RADAR DYNAMIQUE)' : 'MULTI-AXIS VISUAL COMPARISON (DYNAMIC RADAR)'}
               </span>
-              {/* Legend Badges */}
-              <div className="flex flex-wrap items-center justify-center gap-4 mt-3">
+              {/* Legend Badges with prominent, clear avatars */}
+              <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mt-4">
                 {comparedPlayers.map((p, idx) => {
-                  const colors = ['border-purple-500 text-purple-400', 'border-green-500 text-green-400', 'border-sky-400 text-sky-400', 'border-amber-500 text-amber-400'];
-                  const colorClass = colors[idx % colors.length];
+                  const colorConfigs = [
+                    { border: 'border-purple-500', bg: 'bg-purple-950/40', text: 'text-purple-300', dot: 'bg-purple-500', glow: 'shadow-[0_0_15px_rgba(168,85,247,0.15)]' },
+                    { border: 'border-green-500', bg: 'bg-green-950/40', text: 'text-green-300', dot: 'bg-green-500', glow: 'shadow-[0_0_15px_rgba(34,197,94,0.15)]' },
+                    { border: 'border-sky-400', bg: 'bg-sky-950/40', text: 'text-sky-300', dot: 'bg-sky-400', glow: 'shadow-[0_0_15px_rgba(56,189,248,0.15)]' },
+                    { border: 'border-amber-500', bg: 'bg-amber-950/40', text: 'text-amber-300', dot: 'bg-amber-500', glow: 'shadow-[0_0_15px_rgba(245,158,11,0.15)]' },
+                  ];
+                  const cfg = colorConfigs[idx % colorConfigs.length];
                   return (
                     <div
                       key={p.id}
-                      className={`flex items-center gap-2 px-3 py-1 bg-slate-950/80 border rounded-xl text-xs font-semibold ${colorClass}`}
+                      className={`flex items-center gap-3.5 p-2.5 sm:p-3 pr-4 sm:pr-6 bg-slate-900/90 border-2 rounded-2xl transition-all hover:scale-105 ${cfg.border} ${cfg.bg} ${cfg.glow}`}
                     >
-                      <img src={p.photoUrl} alt={p.name} className="w-5 h-5 rounded-md object-cover" />
-                      <span>{p.name}</span>
-                      <span className="text-[10px] text-slate-555 font-normal">({p.clubName})</span>
+                      <div className="relative">
+                        <img 
+                          src={p.photoUrl} 
+                          alt={p.name} 
+                          className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl object-cover object-top border-2 border-white/20 shadow-lg" 
+                        />
+                        <span className={`absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full border-2 border-slate-950 ${cfg.dot}`}></span>
+                      </div>
+                      <div className="text-left">
+                        <span className={`font-black text-sm sm:text-base leading-tight block ${cfg.text}`}>{p.name}</span>
+                        <span className="text-[11px] text-slate-300 block font-medium mt-0.5">
+                          {p.clubName} <span className="text-slate-500">•</span> <span className="text-white font-bold">{p.position}</span>
+                        </span>
+                      </div>
                     </div>
                   );
                 })}
@@ -226,7 +242,7 @@ export default function ComparePage() {
                           <img
                             src={p.photoUrl}
                             alt={p.name}
-                            className="w-16 h-16 rounded-2xl object-cover border-2 border-purple-500/50 shadow-md"
+                            className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl object-cover object-top border-2 border-purple-500/50 shadow-lg"
                           />
                           <span className="text-sm font-black text-white">{p.name.toUpperCase()}</span>
                           <span className="text-[10px] text-slate-400 block">{p.clubName.toUpperCase()}</span>

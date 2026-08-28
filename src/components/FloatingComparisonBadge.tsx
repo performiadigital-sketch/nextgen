@@ -49,13 +49,13 @@ export function FloatingComparisonBadge() {
       <div className="flex items-center gap-4 bg-slate-950/90 backdrop-blur-xl border border-green-500/50 rounded-2xl py-3 px-4 shadow-2xl shadow-green-950/40">
         
         {/* Avatars group */}
-        <div className="flex -space-x-2">
+        <div className="flex -space-x-2.5">
           {comparedPlayers.map((p) => (
             <img
               key={p.id}
               src={p.photoUrl}
               alt={p.name}
-              className="w-8 h-8 rounded-full object-cover object-top border-2 border-slate-950 shadow-md"
+              className="w-10 h-10 rounded-xl object-cover object-top border-2 border-slate-950 shadow-md ring-1 ring-white/10"
             />
           ))}
         </div>
